@@ -1,0 +1,55 @@
+<!-- account.component.html -->
+<div class="slide-menu" [@slideInOut]="isOpen ? 'in' : 'out'">
+  <!-- Header with close and notifications -->
+  <div class="menu-header">
+    <div class="notification-icon">
+      <i class="bi bi-bell"></i>
+    </div>
+    <button class="close-btn" (click)="closeAccount()">
+      <i class="bi bi-x"></i>
+    </button>
+  </div>
+
+  <!-- Profile section -->
+  <div class="profile-section">
+    <div class="profile-avatar">
+      <i class="bi bi-person"></i>
+    </div>
+    <h2>DJ</h2>
+    <div class="user-id">
+     156454
+     
+    </div>
+  </div>
+
+  <!-- Level section -->
+  <div class="level-section">
+    <div class="level-header">
+      <span class="level-badge">level 1</span>
+    </div>
+    <div class="xp-counter">0/900 XP</div>
+  </div>
+
+  <!-- Feature links -->
+  <div class="add-code">
+    <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Add Code " aria-label="add code" aria-describedby="button-addcode">
+  <button class="btn btn-outline-light" type="button" id="button-addcode">ADD</button>
+</div>
+    
+  </div>
+
+  <!-- Settings link -->
+  <div class="settings-link">
+    <a routerLink="/login" routerLinkActive="active-link" class="feature-item">
+      <i class="bi bi-box-arrow-in-left"></i>
+      <span>Log in</span>
+    </a>
+     <a routerLink="/signin" routerLinkActive="active-link" class="feature-item">
+      <i class="bi bi-box-arrow-in-right"></i>
+      <span>Sign up </span>
+    </a>
+  </div>
+</div>
+
+<div class="overlay" [class.active]="isOpen" (click)="closeAccount()"></div>

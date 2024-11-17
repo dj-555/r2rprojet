@@ -1,0 +1,125 @@
+
+.announcement-bar {
+  background-color: #858585;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001c48;
+  height: 250px; 
+  padding: 0 30px;
+  position: relative;
+  margin-top: 20px;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo img {
+  height: 120px;
+  border-radius: 50%;
+ 
+
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 41px;
+  list-style: none;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(189, 182, 182);
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+
+
+}
+.nav-links a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+
+
+
+
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #001c48;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+.account-icon {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.account-icon:hover {
+  transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    margin: 10px 0;
+  }
+
+  .right-section {
+    margin-top: 10px;
+  }
+}

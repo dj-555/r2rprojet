@@ -1,0 +1,44 @@
+<div class="announcement-bar">
+  <p>LIVRAISON GRATUITE à partir de 150DT d'achats</p>
+</div>
+
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="r2rlg.png" alt="Logo" />
+  </div>
+
+  <!-- Navigation Links  -->
+  <ul class="nav-links">
+    <li><a routerLink="/homepage" routerLinkActive="active-link">HOME</a></li>
+    <li><a routerLink="/men" routerLinkActive="active-link">MEN</a></li>
+    <li><a routerLink="/women" routerLinkActive="active-link">WOMEN</a></li>
+    <li>
+         <select name="levels" id="levels">
+             <option value="Level 1 "><a routerLink="/lev1" routerLinkActive="active-link" >Level 1 </a></option>
+             <option value="Level 2 "><a routerLink="/lev2" routerLinkActive="active-link" >Level 2 </a></option>
+             <option value="Level 3 "><a routerLink="/lev3" routerLinkActive="active-link" >Level 3 </a></option>
+         </select>
+    </li>
+  </ul>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <form class="search-bar">
+      <input
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+        class="search-input"
+      />
+      <button type="submit" class="search-btn">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+    <a class="account-icon" (click)="toggleMenu()">
+      <i class="bi bi-person"></i>
+    </a>
+  </div>
+</nav>
+
+<app-account [isOpen]="isAccountOpen" (close)="closeAccount()"></app-account>

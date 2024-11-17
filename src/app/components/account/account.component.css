@@ -1,0 +1,142 @@
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #18181B;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.notification-icon, .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #27272A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.profile-avatar i {
+  font-size: 40px;
+}
+
+.profile-section h2 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+
+.user-id {
+  color: #71717A;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+.level-section {
+  padding: 40px;
+  border-bottom: 1px solid #27272A;
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.level-badge {
+  background-color: #000055;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.xp-counter {
+  color: #71717A;
+  margin-bottom: 8px;
+  font-weight: bolder;
+}
+
+.status-link {
+  color: #71717A;
+  font-size: 15px;
+}
+
+.add-code {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.feature-item i {
+  font-size: 20px;
+}
+
+.settings-link {
+  padding: 20px;
+  margin-top: auto;
+  border-top: 1px solid #27272A;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-menu {
+    width: 100%;
+  }
+}

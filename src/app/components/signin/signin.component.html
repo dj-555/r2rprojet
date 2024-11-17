@@ -1,0 +1,73 @@
+<div class="auth-container">
+  <div class="auth-box">
+    <img src="r2rlg.png" alt="">
+    <h2>Sign up </h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signinForm">
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <!-- tel-->
+
+      <div class="form-group">
+            <label for="tel">telephone</label>
+            <input type="number" id="tel" formControlName="tel" placeholder="Enter your firstname " required>
+        </div>
+
+        <!-- firstname-->
+        <div class="form-group">
+            <label for="Firstname">FirstName</label>
+            <input type="text" id="firstname" formControlName="firstname" placeholder="Enter your firstname " required="">
+        </div>
+       <!-- name -->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" placeholder="Enter your name " required="">
+        </div>
+      
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <!-- valide password -->
+       <div class="form-group">
+        <label for="password">Confirm Password</label>
+        <input
+          type="password"
+          id="validepassword"
+          formControlName="validepassword"
+          placeholder="Valide your password"
+          required
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">
+       sign up 
+      </button>
+
+      <!-- Back to Home -->
+      <div class="back-link">
+        <a (click)="goBack()" class="back-btn">Back to Home</a>
+      </div>
+
+      
+    </form>
+  </div>
+</div>

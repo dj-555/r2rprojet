@@ -1,0 +1,44 @@
+<div class="auth-container">
+  <div class="auth-box">
+   
+         <img src="r2rlg.png" alt="">
+   
+    
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          required
+          placeholder="Enter your email"
+        />
+      </div>
+
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <!-- Submit and Reset Buttons -->
+      <button type="submit" class="submit-btn" [disabled]="loginForm.invalid">Login</button>
+     
+
+      <!-- Back Link -->
+      <div class="back-link">
+        <a (click)="goBack()" class="back-btn">Back to Home</a>
+      </div>
+    </form>
+  </div>
+</div>
