@@ -1,5 +1,7 @@
-
-@if (shouldShowNavbar()) {
-<app-menu></app-menu>
-}
-<router-outlet />
+ @if (shouldShowNavbar()) {
+      <app-menu class="menu"></app-menu>
+    }
+    <router-outlet />
+    @if (shouldShowNavbar()) {
+      <app-footer></app-footer>
+    }

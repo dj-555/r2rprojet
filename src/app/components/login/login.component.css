@@ -71,7 +71,12 @@
     .back-btn:hover {
       text-decoration: underline;
     }
-  
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+
+    }
       img{
         height: 120px;
         border-radius: 50%;

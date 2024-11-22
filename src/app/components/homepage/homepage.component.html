@@ -1,0 +1,40 @@
+<div class="container">
+  <!-- All Levels Section -->
+  <h2 class="level-title">Rise to open all levels</h2>
+  <div class="level-cards">
+    @for (level of levels; track level.levelNumber) {
+      <div class="link-level">
+        <a [routerLink]="['/lev' + level.levelNumber]" routerLinkActive="active-link" class="level-card">
+          <img src="/lvl{{level.levelNumber}}.jpg" [alt]="'Level ' + level.name">
+          <div class="card-body">
+            <h5 class="card-title">Level {{level.name}}</h5>
+          </div>
+        </a>
+      </div>
+    }
+  </div>
+  <!-- Spacer -->
+  <div class="section-spacer"></div>
+  <!-- All Products Section -->
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <div class="product-card"> 
+        <img [src]="product.imgs" class="product-img" [alt]="product.title">
+        <div class="product-body">
+          <h5 class="product-title">{{ product.title }}</h5>
+          <p class="product-desc">{{ product.desc }}</p>
+          <p class="product-price">Price: ${{ product.price.toFixed(2) }}</p>
+          <p class="product-level badge text-bg-info">Level Required: {{ product.requiredLevel }}</p>
+        </div>
+        <div class="product-footer">
+          @if (clients[2].currentLevel >= product.requiredLevel) {
+            <button (click)="addToPanier(product)" class="btn btn-primary">
+              <i class="bi bi-cart-plus"></i> Add to Panier
+            </button>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
+

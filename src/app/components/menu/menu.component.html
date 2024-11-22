@@ -13,13 +13,7 @@
     <li><a routerLink="/homepage" routerLinkActive="active-link">HOME</a></li>
     <li><a routerLink="/men" routerLinkActive="active-link">MEN</a></li>
     <li><a routerLink="/women" routerLinkActive="active-link">WOMEN</a></li>
-    <li>
-         <select name="levels" id="levels">
-             <option value="Level 1 "><a routerLink="/lev1" routerLinkActive="active-link" >Level 1 </a></option>
-             <option value="Level 2 "><a routerLink="/lev2" routerLinkActive="active-link" >Level 2 </a></option>
-             <option value="Level 3 "><a routerLink="/lev3" routerLinkActive="active-link" >Level 3 </a></option>
-         </select>
-    </li>
+
   </ul>
 
   <!-- Right Section -->
@@ -37,6 +31,9 @@
     </form>
     <a class="account-icon" (click)="toggleMenu()">
       <i class="bi bi-person"></i>
+    </a>
+    <a routerLink="/panier" routerLinkActive="active-link" class="panier-icon">
+      <i class="bi bi-cart3"></i>
     </a>
   </div>
 </nav>

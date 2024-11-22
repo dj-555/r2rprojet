@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router'; 
 import { MenuComponent } from './components/menu/menu.component';
 import { filter } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MenuComponent,CommonModule],
+  imports: [RouterOutlet, MenuComponent, CommonModule, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -16,9 +17,15 @@ export class AppComponent {
   private noNavbarRoutes: string[] = ['/login', '/signin'];
   private currentUrl = '';
 
-  constructor(private rout: Router) {
-    this.rout.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
+  private router = inject(Router);
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
       .subscribe((event: NavigationEnd) => {
         this.currentUrl = event.urlAfterRedirects;
       });

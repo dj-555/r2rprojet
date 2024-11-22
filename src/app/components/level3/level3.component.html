@@ -1,1 +1,25 @@
-<p>level3 works!</p>
+<div class="container">
+  <p class="product-level badge">Level Required: III</p>
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      @if (product.requiredLevel === 3) {
+        <div class="product-card">
+          <img [src]="product.imgs" class="product-img" [alt]="product.title">
+          <div class="product-body">
+            <h5 class="product-title">{{ product.title }}</h5>
+            <p class="product-desc">{{ product.desc }}</p>
+            <p class="product-price">Price: ${{ product.price.toFixed(2) }}</p>
+          </div>
+          <div class="product-footer">
+            @if (clients[2].currentLevel >= product.requiredLevel) {
+              <button (click)="addToPanier(product)" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Panier
+              </button>
+            }
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>
+

@@ -8,6 +8,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { Level1Component } from './components/level1/level1.component';
 import { Level2Component } from './components/level2/level2.component';
 import { Level3Component } from './components/level3/level3.component';
+import { PanierComponent } from './components/panier/panier.component';
 
 export const routes: Routes = [
   { path: 'homepage', title: 'Homepage ', component: HomepageComponent },
@@ -19,5 +20,7 @@ export const routes: Routes = [
   { path: 'lev1', title: 'Level 1 ', component: Level1Component },
   { path: 'lev2', title: 'Level 2 ', component: Level2Component },
   { path: 'lev3', title: 'Level 3 ', component: Level3Component },
+  { path: 'panier', title: 'Your Basket ', component: PanierComponent },
+
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
 ];

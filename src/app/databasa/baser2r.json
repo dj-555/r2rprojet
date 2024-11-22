@@ -1,0 +1,331 @@
+{
+  "products": [
+    {
+      "id": "product1",
+      "title": "Classic T-Shirt",
+      "desc": "A comfortable cotton T-shirt for everyday wear.",
+      "price": 15.99,
+      "category": "t-shirt-women",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 1,
+      "code": {
+        "id": "code1",
+        "name": "WELCOME300",
+        "isUsed": true,
+        "product": "product1"
+      },
+      "codeId": "code1",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product2",
+      "title": "Premium Hoodie",
+      "desc": "A warm and stylish hoodie for cooler weather.",
+      "price": 35.99,
+      "category": "hoodie-men",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 2,
+      "code": {
+        "id": "code2",
+        "name": "HOODIE100",
+        "isUsed": true,
+        "product": "product2"
+      },
+      "codeId": "code2",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product3",
+      "title": "Casual Shirt",
+      "desc": "A classic casual shirt for semi-formal occasions.",
+      "price": 29.99,
+      "category": "shirt-women",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 1,
+      "code": {
+        "id": "code3",
+        "name": "DISCOUNT50",
+        "isUsed": true,
+        "product": "product3"
+      },
+      "codeId": "code3",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product4",
+      "title": "Graphic T-Shirt",
+      "desc": "A T-shirt with bold, eye-catching graphics.",
+      "price": 18.99,
+      "category": "t-shirt-men",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 1,
+      "code": {
+        "id": "code4",
+        "name": "SUMMER200",
+        "isUsed": true,
+        "product": "product4"
+      },
+      "codeId": "code4",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product5",
+      "title": "Deluxe Hoodie",
+      "desc": "An ultra-soft hoodie with premium materials.",
+      "price": 49.99,
+      "category": "hoodie-women",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 3,
+      "code": {
+        "id": "code5",
+        "name": "WINTER300",
+        "isUsed": true,
+        "product": "product5"
+      },
+      "codeId": "code5",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product6",
+      "title": "Slim Fit Shirt",
+      "desc": "A modern, slim-fit shirt for a sharp look.",
+      "price": 34.99,
+      "category": "shirt-men",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 2,
+      "code": {
+        "id": "code6",
+        "name": "FALL150",
+        "isUsed": true,
+        "product": "product6"
+      },
+      "codeId": "code6",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product7",
+      "title": "Sports T-Shirt",
+      "desc": "A lightweight, breathable T-shirt for active use.",
+      "price": 22.99,
+      "category": "t-shirt-men",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 1,
+      "code": {
+        "id": "code7",
+        "name": "NEWYEAR500",
+        "isUsed": true,
+        "product": "product7"
+      },
+      "codeId": "code7",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product8",
+      "title": "Winter Hoodie",
+      "desc": "A thick hoodie for keeping warm during winter.",
+      "price": 39.99,
+      "category": "hoodie-men",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 2,
+      "code": {
+        "id": "code8",
+        "name": "SPRING250",
+        "isUsed": true,
+        "product": "product8"
+      },
+      "codeId": "code8",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product9",
+      "title": "Formal Shirt",
+      "desc": "A premium shirt perfect for business meetings.",
+      "price": 44.99,
+      "category": "shirt-women",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 3,
+      "code": {
+        "id": "code9",
+        "name": "LIMITED600",
+        "isUsed": true,
+        "product": "product9"
+      },
+      "codeId": "code9",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    },
+    {
+      "id": "product10",
+      "title": "Vibrant Hoodie",
+      "desc": "A hoodie with a bright and colorful design.",
+      "price": 42.99,
+      "category": "hoodie-women",
+      "isAvailable": true,
+      "imgs": "hod.jpg",
+      "requiredLevel": 3,
+      "code": {
+        "id": "code10",
+        "name": "PREMIUM800",
+        "isUsed": true,
+        "product": "product10"
+      },
+      "codeId": "code10",
+      "createdAt": "2024-11-19T00:00:00Z",
+      "updatedAt": "2024-11-19T00:00:00Z"
+    }
+  ],
+  "codes": [
+    {
+      "id": "code1",
+      "name": "WELCOME300",
+      "isUsed": true,
+      "product": "product1"
+    },
+    {
+      "id": "code2",
+      "name": "HOODIE100",
+      "isUsed": true,
+      "product": "product2"
+    },
+    {
+      "id": "code3",
+      "name": "DISCOUNT50",
+      "isUsed": true,
+      "product": "product3"
+    },
+    {
+      "id": "code4",
+      "name": "SUMMER200",
+      "isUsed": true,
+      "product": "product4"
+    },
+    {
+      "id": "code5",
+      "name": "WINTER300",
+      "isUsed": true,
+      "product": "product5"
+    },
+    {
+      "id": "code6",
+      "name": "FALL150",
+      "isUsed": true,
+      "product": "product6"
+    },
+    {
+      "id": "code7",
+      "name": "NEWYEAR500",
+      "isUsed": true,
+      "product": "product7"
+    },
+    {
+      "id": "code8",
+      "name": "SPRING250",
+      "isUsed": true,
+      "product": "product8"
+    },
+    {
+      "id": "code9",
+      "name": "LIMITED600",
+      "isUsed": true,
+      "product": "product9"
+    },
+    {
+      "id": "code10",
+      "name": "PREMIUM800",
+      "isUsed": true,
+      "product": "product10"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level1",
+      "name": "Beginner",
+      "scoreThreshold": 0,
+      "levelNumber": 1
+    },
+    {
+      "id": "level2",
+      "name": "Intermediate",
+      "scoreThreshold": 900,
+      "levelNumber": 2
+    },
+    {
+      "id": "level3",
+      "name": "Advanced",
+      "scoreThreshold": 1200,
+      "levelNumber": 3
+    }
+
+
+  ],
+  
+  "clients": [
+    {
+      "id": "client1",
+      "email": "johndoe@example.com",
+      "phone": "1234567890",
+      "password": "securepassword1",
+      "lastName": "Doe",
+      "firstName": "John",
+      "isAdmin": false,
+      "address": "123 Elm Street",
+      "currentLevel": 1,
+      "score": 300
+    },
+    {
+      "id": "client2",
+      "email": "janedoe@example.com",
+      "phone": "0987654321",
+      "password": "securepassword2",
+      "lastName": "Doe",
+      "firstName": "Jane",
+      "isAdmin": false,
+      "address": "456 Maple Avenue",
+      "currentLevel": 2,
+      "score": 950
+    },
+    {
+      "id": "client3",
+      "email": "admin@example.com",
+      "phone": null,
+      "password": "adminpassword",
+      "lastName": "Smith",
+      "firstName": "Admin",
+      "isAdmin": true,
+      "address": null,
+      "currentLevel": 3,
+      "score": 1500
+    },
+    {
+      "id": "client4",
+      "email": "alice@example.com",
+      "phone": "1122334455",
+      "password": "securepassword3",
+      "lastName": "Johnson",
+      "firstName": "Alice",
+      "isAdmin": false,
+      "address": "789 Pine Lane",
+      "currentLevel": 1,
+      "score": 600
+    }
+  ]
+}
+
+

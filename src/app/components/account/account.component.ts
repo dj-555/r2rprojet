@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-account',
   standalone: true,
@@ -30,6 +31,8 @@ import { RouterLink } from '@angular/router';
 export class AccountComponent {
   @Input() isOpen = false;
   @Output() close = new EventEmitter<void>();
+  
+  
 
   closeAccount() {
     this.close.emit();

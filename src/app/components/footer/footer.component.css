@@ -1,0 +1,40 @@
+ footer {
+      margin-top: 2rem;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    h5 {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    h5::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(to right, #001c48, #761c5a);
+    }
+    a {
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #761c5a !important;
+    }
+    hr {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .bi {
+      font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      .col-md-4 {
+        text-align: center;
+      }
+      h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+ 

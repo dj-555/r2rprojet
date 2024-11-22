@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -6,6 +6,8 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../service/auth-service.service';
+
 
 @Component({
   selector: 'app-login',
@@ -15,34 +17,43 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+  });
 
-  constructor(private router: Router) {
-    // Initialize the reactive form
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      tel: new FormControl('', [
-        Validators.required,
-        Validators.pattern(/^(\+?\d{1,3}[- ]?)?\d{10}$/),
-      ]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-    });
-  }
+  isLoading = false;
+  errorMessage = '';
+  loged = false;
+
+  private readonly router: Router = inject(Router);
+  private readonly authService: AuthService = inject(AuthService);
 
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Login data:', this.loginForm.value);
-      // Navigate to the homepage
-      this.router.navigate(['/homepage']);
+      this.isLoading = true;
+      const { email, password } = this.loginForm.value;
+
+      this.authService.login(email, password).subscribe(
+        (response) => {
+          this.isLoading = false;
+          console.log('Login successful:', response);
+          this.router.navigate(['/homepage']);
+          this.loged = true;
+        },
+        (error) => {
+          this.isLoading = false;
+          this.errorMessage = 'Invalid email or password. Please try again.';
+          console.error('Login failed:', error);
+        }
+      );
     } else {
-      console.log('Invalid form submission');
+      this.errorMessage = 'Please fill out the form correctly.';
     }
   }
-
-
 
   goBack() {
     this.router.navigate(['/homepage']);

@@ -1,0 +1,23 @@
+<div class="panier-container">
+      <h2>Panier</h2>
+      @if (cartItems.length === 0) {
+        <p>Votre panier est vide.</p>
+      } @else {
+        <ul class="panier-items">
+          @for (item of cartItems; track item.id) {
+            <li class="panier-item">
+              <img [src]="item.imgs" [alt]="item.title" class="panier-item-image">
+              <div class="panier-item-details">
+                <h3>{{ item.title }}</h3>
+                <p>Prix: ${{ item.price.toFixed(2) }}</p>
+              </div>
+              <button (click)="removeFromCart(item.id)" class="btn btn-danger btn-sm">Supprimer</button>
+            </li>
+          }
+        </ul>
+        <div class="panier-total">
+          <strong>Total: ${{ calculateTotal().toFixed(2) }}</strong>
+        </div>
+        <button (click)="clearCart()" class="btn btn-warning">Vider le panier</button>
+      }
+    </div>
