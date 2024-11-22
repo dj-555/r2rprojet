@@ -21,6 +21,5 @@ export const routes: Routes = [
   { path: 'lev2', title: 'Level 2 ', component: Level2Component },
   { path: 'lev3', title: 'Level 3 ', component: Level3Component },
   { path: 'panier', title: 'Your Basket ', component: PanierComponent },
-
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
 ];

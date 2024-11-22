@@ -21,7 +21,7 @@ export class ProductService {
   }
 
   createProduct(
-    product: Omit<Product, 'id' | 'createdAt' | 'updatedAt'>
+    product: Omit<Product, 'id' | 'createdAt' | 'updatedAt' | 'code'>
   ): Observable<Product> {
     return this.http.post<Product>(apiUrl, product);
   }

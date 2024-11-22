@@ -1,1 +1,67 @@
-<p>admin-dashboard works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Admin Dashboard - Add New Product</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="product-form">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input id="title" type="text" formControlName="title" class="form-control" [ngClass]="{'is-invalid': formSubmitted && productForm.get('title')?.invalid}" required>
+              <div class="invalid-feedback" *ngIf="formSubmitted && productForm.get('title')?.invalid">Title is required</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="desc" class="form-label">Description:</label>
+              <textarea id="desc" formControlName="desc" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Price:</label>
+              <input id="price" type="number" formControlName="price" class="form-control" [ngClass]="{'is-invalid': formSubmitted && productForm.get('price')?.invalid}" required>
+              <div class="invalid-feedback" *ngIf="formSubmitted && productForm.get('price')?.invalid">Valid price is required</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Category:</label>
+              <select id="category" formControlName="category" class="form-select" [ngClass]="{'is-invalid': formSubmitted && productForm.get('category')?.invalid}" required>
+                <option value="">Select a category</option>
+                @for (category of categories; track category) {
+                  <option [value]="category">{{ category }}</option>
+                }
+              </select>
+              <div class="invalid-feedback" *ngIf="formSubmitted && productForm.get('category')?.invalid">Category is required</div>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input id="isAvailable" type="checkbox" formControlName="isAvailable" class="form-check-input">
+              <label class="form-check-label" for="isAvailable">Available</label>
+            </div>
+
+            <div class="mb-3">
+              <label for="imgs" class="form-label">Image URL:</label>
+              <input id="imgs" type="text" formControlName="imgs" class="form-control" [ngClass]="{'is-invalid': formSubmitted && productForm.get('imgs')?.invalid}" required>
+              <div class="invalid-feedback" *ngIf="formSubmitted && productForm.get('imgs')?.invalid">Image URL is required</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="requiredLevel" class="form-label">Required Level:</label>
+              <input id="requiredLevel" type="number" formControlName="requiredLevel" class="form-control" [ngClass]="{'is-invalid': formSubmitted && productForm.get('requiredLevel')?.invalid}" required>
+              <div class="invalid-feedback" *ngIf="formSubmitted && productForm.get('requiredLevel')?.invalid">Valid required level is needed</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="codeId" class="form-label">Code ID:</label>
+              <input id="codeId" type="text" formControlName="codeId" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" [disabled]="productForm.invalid && formSubmitted">Add Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
